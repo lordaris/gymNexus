@@ -1,5 +1,6 @@
 # dependencies
 /node_modules
+node_modules
 /.pnp
 .pnp.js
 node_modules/@next/swc-linux-x64-gnu/
