@@ -116,7 +116,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/lordaris/Documentos/apps/nextjs/app-de-rutinas",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -159,7 +159,7 @@
       <workItem from="1683553198857" duration="7539000" />
       <workItem from="1683572122898" duration="25223000" />
       <workItem from="1683643043229" duration="1031000" />
-      <workItem from="1683673071424" duration="7859000" />
+      <workItem from="1683673071424" duration="8317000" />
     </task>
     <servers />
   </component>
