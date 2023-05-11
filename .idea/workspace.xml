@@ -5,103 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e09a8b02-6421-4ecf-9fc5-474e7d8ba6f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/vercel.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/build-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development-fallback/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development-fallback/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development-fallback/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development-fallback/2.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development-fallback/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development-fallback/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development-fallback/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development-fallback/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/2.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/3.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/10.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/11.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/12.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/13.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/14.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/15.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/16.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/17.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/17.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/18.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/18.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/19.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/19.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/2.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/20.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/20.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/21.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/21.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/22.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/22.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/23.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/23.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/24.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/24.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/3.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/4.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/5.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/6.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/7.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/8.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/9.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/middleware-build-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/middleware-build-manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/pages-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/pages/_document.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard/users/[id].js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard/users/createuser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard/users/createuser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard/workouts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard/workouts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard/workouts/new/workout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/pages/coach/dashboard/workouts/new/workout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/pages/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard/users/[id].js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard/users/createuser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard/users/createuser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard/workouts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard/workouts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard/workouts/new/workout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/coach/dashboard/workouts/new/workout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/development/_buildManifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/development/_buildManifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/0e263938057ea9f2.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/2c35d7bd2865f885.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/30cc2df88f82003e.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/41652afbca3fe18e.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/5a94774ff8ddebfc.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/61c979e538e6817a.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/684832286eb69920.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/89a66e77b930d280.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/d835affce8be2bec.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/ea9c8ebd516338fd.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.0e263938057ea9f2.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.2c35d7bd2865f885.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.30cc2df88f82003e.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.41652afbca3fe18e.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.5a94774ff8ddebfc.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.61c979e538e6817a.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.684832286eb69920.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.89a66e77b930d280.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.d835affce8be2bec.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.ea9c8ebd516338fd.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/trace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/_document.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/workout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/workout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/signup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/signup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/components/coachLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/components/coachLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/components/coachNavBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/components/logoutButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/components/logoutButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/components/userLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/components/userLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/components/userNavBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +79,7 @@
       <workItem from="1683753558615" duration="3877000" />
       <workItem from="1683761724926" duration="6606000" />
       <workItem from="1683820151283" duration="6806000" />
+      <workItem from="1683836789349" duration="2800000" />
     </task>
     <servers />
   </component>
