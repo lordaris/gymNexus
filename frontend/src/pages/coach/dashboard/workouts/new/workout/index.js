@@ -90,7 +90,9 @@ export default function AddWorkout() {
 
   return (
     <Layout>
-      <h1 className={"text-4xl font-thin font-lato"}>Add Workout</h1>
+      <div className="flex justify-center">
+        <h1 className="text-4xl m-4 font-thin font-lato">Add workout</h1>
+      </div>{" "}
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="assignedTo">Assigned to:</label>
@@ -100,9 +102,7 @@ export default function AddWorkout() {
             value={formValues.assignedTo}
             onChange={handleChange}
           >
-            <option disabled selected>
-              Select a User
-            </option>
+            <option disabled defaultValue={""}></option>
             {users.map((user) => (
               <option key={user._id} value={user._id}>
                 {user.email}

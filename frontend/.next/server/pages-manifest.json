@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/coach/dashboard/users": "pages/coach/dashboard/users.js",
-  "/coach/dashboard/workouts/new/workout": "pages/coach/dashboard/workouts/new/workout.js",
-  "/coach/dashboard/users/[id]": "pages/coach/dashboard/users/[id].js"
+  "/": "pages/index.js"
 }

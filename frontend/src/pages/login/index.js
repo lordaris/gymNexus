@@ -40,7 +40,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex flex-col h-full items-center justify-center ">
+    <div className="flex flex-col h-full items-center justify-center min-h-screen p-10 text-base-content bg-base-100 ">
       <div className="">
         <div>
           <h1 className={"font-thin font-lato text-4xl m-4"}>
@@ -88,8 +88,8 @@ export default function LoginPage() {
             <div className="mt-2 text-sm text-red-600">{errorMessage}</div>
           )}
 
-          <div>
-            <button type="submit" className="btn btn-success ">
+          <div className={"flex justify-center"}>
+            <button type="submit" className="btn btn-primary ">
               Login{" "}
             </button>
           </div>

@@ -34,10 +34,10 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="flex flex-col h-full items-center justify-center ">
+    <div className="min-h-screen flex flex-col h-full items-center justify-center p-10 text-base-content bg-base-100">
       <div className="">
         <div>
-          <h1 className="text-4xl m-4 font-thin font-lato">
+          <h1 className="text-4xl m-4 font-lato ">
             Create an account, it is free!
           </h1>
         </div>
@@ -81,8 +81,11 @@ export default function SignupPage() {
                 Rol
               </label>
             </div>
-            <div>
-              <button type="submit" className="btn btn-success">
+            <div className={"flex justify-center"}>
+              <button
+                type="submit"
+                className="btn btn-primary flex justify-center"
+              >
                 Create account
               </button>
             </div>
