@@ -41,7 +41,7 @@ export default function AddWorkout() {
         setUsers(response.data);
       })
       .catch((error) => console.error(error));
-  }, [token]);
+  }, [coachId, token]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -14,5 +14,5 @@ export default function LoginRedirect() {
         router.push("/coach/dashboard");
       }
     }
-  }, []);
+  }, [router]);
 }

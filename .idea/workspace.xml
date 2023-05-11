@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e09a8b02-6421-4ecf-9fc5-474e7d8ba6f4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/exercise/[workoutId]/[dayId].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/exercise/[workoutId]/[dayId].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/workout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/workout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/update/[workoutId]/[dayId]/[exerciseId].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/update/[workoutId]/[dayId]/[exerciseId].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/components/loginRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/components/loginRedirect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +81,7 @@
       <workItem from="1683753558615" duration="3877000" />
       <workItem from="1683761724926" duration="6606000" />
       <workItem from="1683820151283" duration="6806000" />
-      <workItem from="1683836789349" duration="6799000" />
+      <workItem from="1683836789349" duration="7345000" />
     </task>
     <servers />
   </component>

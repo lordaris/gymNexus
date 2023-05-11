@@ -39,7 +39,7 @@ function ExerciseEditPage() {
         })
         .catch((error) => console.error(error));
     }
-  }, [workoutId, dayId, exerciseId]);
+  }, [workoutId, dayId, exerciseId, token]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
