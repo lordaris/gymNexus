@@ -23,8 +23,8 @@ export default function RoutinesPage() {
         <table className="table mx-auto">
           <tbody>
             {routines.map((workout) => (
-              <tr className={"hover"}>
-                <td key={workout._id}>
+              <tr key={workout._id} className={"hover"}>
+                <td>
                   <div>
                     <div className="">
                       <Link href={`/coach/dashboard/workouts/${workout._id}`}>
