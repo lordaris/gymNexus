@@ -10,7 +10,7 @@ import LogoutButton from "./logoutButton";
 const CoachLayout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const securityCheck = () => {
+  const SecurityCheck = () => {
     const role = Cookies.get("role");
     const router = useRouter();
 

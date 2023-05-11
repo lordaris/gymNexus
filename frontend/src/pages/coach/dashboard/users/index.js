@@ -23,9 +23,9 @@ export default function UsersPage() {
           <table className="table mx-auto">
             <tbody>
               {users.map((user) => (
-                <tr className={"hover"}>
+                <tr key={user._id} className={"hover"}>
                   <td>
-                    <div key={user._id}>
+                    <div>
                       <Link href={`/coach/dashboard/users/${user._id}`}>
                         {user.email}
                       </Link>

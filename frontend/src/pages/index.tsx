@@ -26,7 +26,7 @@ const Home = () => {
           <div className={"flex justify-center"}>
             <Link href={"/coach/signup"} className={"pb-4"}>
               <button className={"btn btn-primary btn-lg px-24 "}>
-                I'm new
+                I am new
               </button>
             </Link>
           </div>

@@ -13,7 +13,7 @@ const UserLayout = ({ children }) => {
   const role = Cookies.get("role");
   const router = useRouter();
 
-  const securityCheck = () => {
+  const SecurityCheck = () => {
     const role = Cookies.get("role");
     const router = useRouter();
 

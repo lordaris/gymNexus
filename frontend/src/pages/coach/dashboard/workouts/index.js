@@ -24,8 +24,8 @@ export default function RoutinesPage() {
           <tbody>
             {routines.map((workout) => (
               <tr className={"hover"}>
-                <td>
-                  <div key={workout._id}>
+                <td key={workout._id}>
+                  <div>
                     <div className="">
                       <Link href={`/coach/dashboard/workouts/${workout._id}`}>
                         {workout.name}
