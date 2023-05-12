@@ -4,8 +4,6 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import LoginRedirect from "../components/loginRedirect";
 
-const API_URL = process.env.API_URL;
-
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
