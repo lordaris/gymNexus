@@ -10,7 +10,8 @@ export default function LoginRedirect() {
       const role = Cookies.get("role");
       if (role === "ATHLETE") {
         router.push("/user/dashboard");
-      } else {
+      }
+      if (role === "COACH") {
         router.push("/coach/dashboard");
       }
     }

@@ -1,14 +1,32 @@
+import axios from "axios";
+import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
-import { getCoachRoutines } from "../../../api/getCoachRoutines";
 import Link from "next/link";
 import LogoutButton from "../../../components/logoutButton";
 import Layout from "../../../components/coachLayout";
+
 export default function RoutinesPage() {
   const [routines, setRoutines] = useState([]);
+
   useEffect(() => {
     const fetchRoutines = async () => {
-      const routines = await getCoachRoutines();
-      setRoutines(routines);
+      const token = Cookies.get("token");
+      const coachId = Cookies.get("user");
+      const response = await axios.get(
+        process.env.NEXT_PUBLIC_API_URL + `/workouts/list/coach/${coachId}`,
+        {
+          headers: {
+            Authorization: `${token}`,
+          },
+        }
+      );
+      const data = response.data;
+      console.log(data);
+      if (data && data.length > 0) {
+        setRoutines(data);
+      } else {
+        setRoutines([]);
+      }
     };
     fetchRoutines();
   }, []);

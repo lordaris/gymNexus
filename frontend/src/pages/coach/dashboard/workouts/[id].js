@@ -20,7 +20,7 @@ function Workouts() {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:3002/workouts/list/${id}`, {
+        .get(process.env.NEXT_PUBLIC_API_URL + `/workouts/list/${id}`, {
           headers: { Authorization: `${token}` },
         })
         .then((response) => setWorkout(response.data))
@@ -41,7 +41,7 @@ function Workouts() {
   const handleDeleteWorkout = () => {
     if (window.confirm("¿Está seguro de que desea eliminar esta rutina?")) {
       axios
-        .delete(`http://localhost:3002/workouts/delete/${id}`, {
+        .delete(process.env.NEXT_PUBLIC_API_URL + `/workouts/delete/${id}`, {
           headers: { Authorization: `${token}` },
         })
         .then((response) => {
@@ -56,7 +56,8 @@ function Workouts() {
     if (window.confirm("Are you sure you want to delete this exercise?")) {
       axios
         .delete(
-          `http://localhost:3002/workouts/delete/${workoutId}/${dayId}/${exerciseId}`,
+          process.env.NEXT_PUBLIC_API_URL +
+            `/workouts/delete/${workoutId}/${dayId}/${exerciseId}`,
           { headers: { Authorization: `${token}` } }
         )
         .then((response) => {
@@ -82,9 +83,13 @@ function Workouts() {
   const handleDeleteDay = (workoutId, dayId) => {
     if (window.confirm("Are you sure you want to delete this day?")) {
       axios
-        .delete(`http://localhost:3002/workouts/delete/${workoutId}/${dayId}`, {
-          headers: { Authorization: `${token}` },
-        })
+        .delete(
+          process.env.NEXT_PUBLIC_API_URL +
+            `/workouts/delete/${workoutId}/${dayId}`,
+          {
+            headers: { Authorization: `${token}` },
+          }
+        )
         .then((response) => {
           alert("Day deleted successfully.");
           // Update the state of the workout to reflect the deletion

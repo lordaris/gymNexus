@@ -1,16 +1,31 @@
-import { getCoachUsers } from "../../../api/getCoachUsers";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import axios from "axios";
+import Cookies from "js-cookie";
 import Layout from "../../../components/coachLayout";
-
-// TODO - Add a link to create a new user, and a link to edit each user
 
 export default function UsersPage() {
   const [users, setUsers] = useState([]);
+
   useEffect(() => {
     const fetchUsers = async () => {
-      const users = await getCoachUsers();
-      setUsers(users);
+      const token = Cookies.get("token");
+      const coachId = Cookies.get("user");
+      const response = await axios.get(
+        process.env.NEXT_PUBLIC_API_URL + `/users/list/${coachId}`,
+        {
+          headers: {
+            Authorization: `${token}`,
+          },
+        }
+      );
+      const data = response.data;
+      console.log(data);
+      if (data && data.length > 0) {
+        setUsers(data);
+      } else {
+        setUsers([]);
+      }
     };
     fetchUsers();
   }, []);

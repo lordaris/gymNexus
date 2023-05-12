@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import Cookies from "js-cookie";
-
 import LoginRedirect from "../../components/loginRedirect";
+
 export default function SignupPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -17,11 +16,14 @@ export default function SignupPage() {
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3002/users/signup", {
-        email,
-        password,
-        role,
-      });
+      const response = await axios.post(
+        process.env.NEXT_PUBLIC_API_URL + "/users/signup",
+        {
+          email,
+          password,
+          role,
+        }
+      );
       alert("User created successfully");
       router.push("/login");
     } catch (error) {
@@ -32,7 +34,6 @@ export default function SignupPage() {
       }
     }
   };
-
   return (
     <div className="min-h-screen flex flex-col h-full items-center justify-center p-10 text-base-content bg-base-100">
       <div className="">

@@ -23,7 +23,8 @@ export default function UserWorkouts() {
     if (confirm) {
       axios
         .put(
-          `http://localhost:3002/workouts/unassign/${workoutId}/${userId}`,
+          process.env.NEXT_PUBLIC_API_URL +
+            `/workouts/unassign/${workoutId}/${userId}`,
           {},
           {
             headers: { Authorization: `${token}` },
@@ -41,9 +42,12 @@ export default function UserWorkouts() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/workouts/list/assigned/${userId}`, {
-        headers: { Authorization: `${token}` },
-      })
+      .get(
+        process.env.NEXT_PUBLIC_API_URL + `/workouts/list/assigned/${userId}`,
+        {
+          headers: { Authorization: `${token}` },
+        }
+      )
       .then((response) => {
         setWorkouts(response.data);
       })
@@ -52,7 +56,7 @@ export default function UserWorkouts() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/users/${userId}`, {
+      .get(process.env.NEXT_PUBLIC_API_URL + `/users/${userId}`, {
         headers: { Authorization: `${token}` },
       })
       .then((response) => {

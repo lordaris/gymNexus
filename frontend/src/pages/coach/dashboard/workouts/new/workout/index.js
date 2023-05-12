@@ -34,7 +34,7 @@ export default function AddWorkout() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/users/list/${coachId}`, {
+      .get(process.env.NEXT_PUBLIC_API_URL + `/users/list/${coachId}`, {
         headers: { Authorization: `${token}` },
       })
       .then((response) => {
@@ -47,7 +47,7 @@ export default function AddWorkout() {
     e.preventDefault();
     const newWorkout = { ...formValues };
     axios
-      .post(`http://localhost:3002/workouts/create`, newWorkout, {
+      .post(process.env.NEXT_PUBLIC_API_URL + `/workouts/create`, newWorkout, {
         headers: { Authorization: `${token}` },
       })
       .then(() => {

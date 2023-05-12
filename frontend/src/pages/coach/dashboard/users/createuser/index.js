@@ -20,12 +20,15 @@ export default function SignupPage() {
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3002/users/signup", {
-        email,
-        password,
-        role,
-        addedBy,
-      });
+      const response = await axios.post(
+        process.env.NEXT_PUBLIC_API_URL + "/users/signup",
+        {
+          email,
+          password,
+          role,
+          addedBy,
+        }
+      );
       alert("User created successfully");
       const token = response.data.token;
       await router.push("/coach/dashboard/users");

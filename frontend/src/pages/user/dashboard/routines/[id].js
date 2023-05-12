@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import Layout from "../../../components/userLayout";
-import Link from "next/link";
 
 function UserDashboard() {
   const [workout, setWorkout] = useState(null);
@@ -16,7 +15,7 @@ function UserDashboard() {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:3002/workouts/list/${id}`, {
+        .get(process.env.NEXT_PUBLIC_API_URL + `/workouts/list/${id}`, {
           headers: { Authorization: `${token}` },
         })
         .then((response) => setWorkout(response.data))

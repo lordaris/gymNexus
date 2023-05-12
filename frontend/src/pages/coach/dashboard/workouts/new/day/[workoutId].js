@@ -17,9 +17,13 @@ export default function NewDayForm() {
     e.preventDefault();
     const newDay = { ...formValues };
     axios
-      .post(`http://localhost:3002/workouts/add/${workoutId}`, newDay, {
-        headers: { Authorization: `${token}` },
-      })
+      .post(
+        process.env.NEXT_PUBLIC_API_URL + `/workouts/add/${workoutId}`,
+        newDay,
+        {
+          headers: { Authorization: `${token}` },
+        }
+      )
       .then(() => {
         alert("Day added!");
         router.push(`/coach/dashboard/workouts/${workoutId}`);

@@ -21,7 +21,7 @@ function ExerciseEditPage() {
   useEffect(() => {
     if (workoutId) {
       axios
-        .get(`http://localhost:3002/workouts/list/${workoutId}`, {
+        .get(process.env.NEXT_PUBLIC_API_URL + `/workouts/list/${workoutId}`, {
           headers: { Authorization: `${token}` },
         })
         .then((response) => {
@@ -46,7 +46,8 @@ function ExerciseEditPage() {
     const updatedExercise = { ...formValues };
     axios
       .put(
-        `http://localhost:3002/workouts/update/${workoutId}/${dayId}/${exerciseId}`,
+        process.env.NEXT_PUBLIC_API_URL +
+          `/workouts/update/${workoutId}/${dayId}/${exerciseId}`,
         updatedExercise,
         { headers: { Authorization: `${token}` } }
       )

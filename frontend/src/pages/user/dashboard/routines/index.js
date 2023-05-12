@@ -1,14 +1,26 @@
 import { useState, useEffect } from "react";
-import { getRoutines } from "../../../api/getRoutines";
-import Link from "next/link";
-import LogoutButton from "../../../components/logoutButton";
-import Layout from "../../../components/userLayout";
+import axios from "axios";
 import Cookies from "js-cookie";
+import Link from "next/link";
+import Layout from "../../../components/userLayout";
 
-// TODO Style workouts page
+export const getRoutines = async () => {
+  const token = Cookies.get("token");
+  const userId = Cookies.get("user");
+  const response = await axios.get(
+    process.env.NEXT_PUBLIC_API_URL + `/workouts/list/assigned/${userId}`,
+    {
+      headers: {
+        Authorization: `${token}`,
+      },
+    }
+  );
+  return response.data;
+};
 
 export default function RoutinesPage() {
   const [routines, setRoutines] = useState([]);
+
   useEffect(() => {
     const fetchRoutines = async () => {
       const routines = await getRoutines();

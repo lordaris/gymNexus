@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import LoginRedirect from "../components/loginRedirect";
-import Link from "next/link";
+
+const API_URL = process.env.API_URL;
+
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,10 +18,13 @@ export default function LoginPage() {
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3002/users/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        process.env.NEXT_PUBLIC_API_URL + `/users/login`,
+        {
+          email,
+          password,
+        }
+      );
       const token = response.data.token;
       Cookies.set("token", token); // Store token in cookie
       console.log(response.data);

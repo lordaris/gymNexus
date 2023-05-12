@@ -15,7 +15,8 @@ export default function AssignWorkout() {
   const handleAssign = (workoutId) => {
     axios
       .put(
-        `http://localhost:3002/workouts/assign/${workoutId}/${userId}`,
+        process.env.NEXT_PUBLIC_API_URL +
+          `/workouts/assign/${workoutId}/${userId}`,
         {},
         {
           headers: { Authorization: `${token}` },
@@ -33,9 +34,12 @@ export default function AssignWorkout() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/workouts/list/coach/${coachId}`, {
-        headers: { Authorization: `${token}` },
-      })
+      .get(
+        process.env.NEXT_PUBLIC_API_URL + `/workouts/list/coach/${coachId}`,
+        {
+          headers: { Authorization: `${token}` },
+        }
+      )
       .then((response) => {
         setCoachWorkouts(response.data);
       })
