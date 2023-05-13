@@ -27,11 +27,7 @@ export default function SignupPage() {
       alert("User created successfully");
       router.push("/login");
     } catch (error) {
-      if (error.response.data.message === "User already exists") {
-        alert(error.response.data.message);
-      } else {
-        setErrorMessage(error.response.data.message);
-      }
+      alert(error.response.data.message);
     }
   };
   return (
