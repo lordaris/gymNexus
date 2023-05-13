@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Layout from "../../../components/coachLayout";
 import Link from "next/link";
 import { BsTrashFill } from "react-icons/bs";
-import { FaEdit } from "react-icons/fa";
+import { FaEdit, FaPlus } from "react-icons/fa";
 
 function Workouts() {
   const [workout, setWorkout] = useState(null);
@@ -124,19 +124,21 @@ function Workouts() {
                 onClick={() => toggleDetails(day)}
               >
                 <div className="flex justify-center py-4 items-center">
-                  {day.day} ({day.focus})
-                  <Link
-                    href={`/coach/dashboard/workouts/new/exercise/${id}/${day._id}`}
-                    className=" text-success px-4 py-2"
-                  >
-                    <FaEdit className="" />
-                  </Link>
+                  {day.day} ({day.focus}){" "}
                   <button
                     onClick={() => handleDeleteDay(id, day._id)}
                     className=" text-error px-4 py-2"
                   >
-                    <BsTrashFill />
+                    <BsTrashFill />{" "}
                   </button>
+                </div>
+                <div>
+                  <Link
+                    href={`/coach/dashboard/workouts/new/exercise/${id}/${day._id}`}
+                    className="btn text-success px-4 py-2"
+                  >
+                    New Exercise{" "}
+                  </Link>
                 </div>
               </h2>
               <div className="divider"></div>
