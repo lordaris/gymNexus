@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import Layout from "../../../components/userLayout";
+import { BsTrashFill } from "react-icons/bs";
+import Link from "next/link";
 
 function UserDashboard() {
   const [workout, setWorkout] = useState(null);
@@ -37,40 +39,52 @@ function UserDashboard() {
   return (
     <Layout>
       <div className="">
-        <h1 className="text-4xl font-thin font-lato">{workout.name} </h1>
-
+        <h1 className="text-5xl font-extrabold font-lato">{workout.name}</h1>
         <ul>
           {workout.days.map((day) => (
-            <li key={day._id}>
+            <li key={day._id} className="my-8">
               <h2
-                className={"text-4xl font-thin font-lato "}
+                className="text-3xl font-extrabold font-lato cursor-pointer"
                 onClick={() => toggleDetails(day)}
               >
                 {day.day} ({day.focus})
               </h2>
-
               {selectedDay === day && (
-                <ul>
+                <ul className="">
                   {day.exercises.map((exercise) => (
-                    <li key={exercise._id} className="text-3xl font-bebas-neue">
-                      <h3 className="text-4xl ">{exercise.name}</h3>
-                      <p>
-                        <span className={"font-semibold"}>Sets:</span>{" "}
+                    <li key={exercise._id} className="my-4">
+                      <h3 className="text-3xl font-bold font-bebas-neue">
+                        {exercise.video ? (
+                          <a
+                            href={exercise.video}
+                            className="text-blue-500 hover:text-blue-700"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {exercise.name}
+                          </a>
+                        ) : (
+                          <span>{exercise.name}</span>
+                        )}
+                      </h3>
+                      <p className="text-xl">
+                        <span className="font-semibold">Sets:</span>{" "}
                         {exercise.sets}
                       </p>
-                      <p>
-                        <span className={"font-semibold"}>Reps: </span>
+                      <p className="text-xl">
+                        <span className="font-semibold">Reps:</span>{" "}
                         {exercise.reps}
                       </p>
-                      <p>
-                        <span className={"font-semibold"}>Cadence:</span>{" "}
+                      <p className="text-xl">
+                        <span className="font-semibold">Cadence:</span>{" "}
                         {exercise.cadence}
                       </p>
-                      <p>
-                        <span className={"font-semibold"}>Notes: </span>
-                        {exercise.notes}
-                      </p>
-                      <div className={"divider"}></div>
+                      {exercise.notes && exercise.notes.trim().length > 0 && (
+                        <p className="text-xl">
+                          <span className="font-semibold">Notes:</span>{" "}
+                          {exercise.notes}
+                        </p>
+                      )}
                     </li>
                   ))}
                 </ul>

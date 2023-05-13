@@ -122,6 +122,17 @@ function AddExercise() {
             onChange={handleChange}
           />
         </div>
+        <div>
+          <label htmlFor="video"></label>
+          <input
+            type="text"
+            name="video"
+            className={"input input-ghost w-full max-w-xs m-4"}
+            placeholder={"Video"}
+            value={formValues.video}
+            onChange={handleChange}
+          />
+        </div>
         <button className={"btn btn-success"} type="submit">
           Add Exercise
         </button>

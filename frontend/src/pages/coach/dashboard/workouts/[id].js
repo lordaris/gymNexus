@@ -5,12 +5,14 @@ import { useRouter } from "next/router";
 import Layout from "../../../components/coachLayout";
 import Link from "next/link";
 import { BsTrashFill } from "react-icons/bs";
+import { FaEdit } from "react-icons/fa";
 
 function Workouts() {
   const [workout, setWorkout] = useState(null);
   const [selectedDay, setSelectedDay] = useState(null);
   const token = Cookies.get("token");
   const router = useRouter();
+
   // const { id } = router.query;
   // The next const is the same as the one above, but it's destructured
   const {
@@ -107,70 +109,92 @@ function Workouts() {
   return (
     <Layout>
       <div className="">
-        <h1 className={"text-4xl font-thin font-lato"}>
+        <h1 className="text-4xl font-thin font-lato">
           {workout.name}
           <button className="text-error" onClick={handleDeleteWorkout}>
             <BsTrashFill />
           </button>
         </h1>
+
         <ul>
           {workout.days.map((day) => (
             <li key={day._id} className="">
               <h2
-                className={"text-4xl font-thin font-lato "}
+                className="text-4xl font-thin font-lato cursor-pointer"
                 onClick={() => toggleDetails(day)}
               >
-                {day.day} ({day.focus})
-                <div className="">
+                <div className="flex justify-center py-4 items-center">
+                  {day.day} ({day.focus})
                   <Link
                     href={`/coach/dashboard/workouts/new/exercise/${id}/${day._id}`}
-                    className="btn"
+                    className=" text-success px-4 py-2"
                   >
-                    Add exercise
+                    <FaEdit className="" />
                   </Link>
                   <button
                     onClick={() => handleDeleteDay(id, day._id)}
-                    className={"btn btn-error m-4"}
+                    className=" text-error px-4 py-2"
                   >
-                    Delete day
+                    <BsTrashFill />
                   </button>
                 </div>
               </h2>
-              <div className={"divider"}></div>
+              <div className="divider"></div>
+
               {selectedDay === day && (
-                <ul className={""}>
+                <ul className="">
                   {day.exercises.map((exercise) => (
-                    <li key={exercise._id} className="text-3xl font-bebas-neue">
-                      <h3 className="text-4xl ">{exercise.name}</h3>
-                      <p>
-                        <span className={"font-semibold"}>Sets:</span>{" "}
+                    <li key={exercise._id} className="text-xl font-lato">
+                      {" "}
+                      <h3 className="text-3xl font-bebas-neue">
+                        {exercise.video ? (
+                          <a
+                            href={exercise.video}
+                            className="text-primary hover:text-primary-dark"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {exercise.name}
+                          </a>
+                        ) : (
+                          <span>{exercise.name}</span>
+                        )}
+                      </h3>
+                      <div className={"flex justify-center items-center"}>
+                        <Link
+                          href={`/coach/dashboard/workouts/update/${id}/${day._id}/${exercise._id}`}
+                          className="text-success px-4 py-2 mr-4"
+                        >
+                          <FaEdit />
+                        </Link>
+                        <button
+                          onClick={() =>
+                            handleDelete(id, day._id, exercise._id)
+                          }
+                          className="text-error px-4 py-2"
+                        >
+                          <BsTrashFill />
+                        </button>
+                      </div>
+                      <p className="text-lg font-lato">
+                        <span className="font-semibold">Sets:</span>{" "}
                         {exercise.sets}
                       </p>
-                      <p>
-                        <span className={"font-semibold"}>Reps: </span>
+                      <p className="text-lg font-lato">
+                        <span className="font-semibold">Reps:</span>{" "}
                         {exercise.reps}
                       </p>
-                      <p>
-                        <span className={"font-semibold"}>Cadence:</span>{" "}
+                      <p className="text-lg font-lato">
+                        <span className="font-semibold">Cadence:</span>{" "}
                         {exercise.cadence}
                       </p>
-                      <p>
-                        <span className={"font-semibold"}>Notes: </span>
-                        {exercise.notes}
-                      </p>
-                      <Link
-                        href={`/coach/dashboard/workouts/update/${id}/${day._id}/${exercise._id}`}
-                        className="btn m-4"
-                      >
-                        Edit
-                      </Link>
-                      <button
-                        className={"btn btn-error"}
-                        onClick={() => handleDelete(id, day._id, exercise._id)}
-                      >
-                        Delete
-                      </button>
-                      <div className={"divider"}></div>
+                      {exercise.notes && exercise.notes.trim().length > 0 && (
+                        <p className="text-lg font-lato">
+                          <span className="font-semibold">Notes:</span>{" "}
+                          {exercise.notes}
+                        </p>
+                      )}
+                      <div className="divider"></div>
                     </li>
                   ))}
                 </ul>
@@ -178,9 +202,10 @@ function Workouts() {
             </li>
           ))}
         </ul>
+
         <Link
           href={`/coach/dashboard/workouts/new/day/${workout._id}`}
-          className="btn btn-success m-4"
+          className="btn bg-success text-white rounded-md px-4 py-2 mt-8"
         >
           Add day
         </Link>

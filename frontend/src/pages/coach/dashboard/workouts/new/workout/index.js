@@ -254,6 +254,21 @@ export default function AddWorkout() {
                     }
                   />
                 </div>
+                <div>
+                  <label
+                    htmlFor={`day-${dayIndex}-exercise-${exerciseIndex}-video`}
+                  ></label>
+                  <input
+                    type="text"
+                    name="video"
+                    className="input input-ghost w-full max-w-xs"
+                    placeholder={"Video"}
+                    value={exercise.video}
+                    onChange={(e) =>
+                      handleExerciseChange(e, dayIndex, exerciseIndex)
+                    }
+                  />
+                </div>
               </div>
             ))}
             <button

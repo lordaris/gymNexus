@@ -20,6 +20,9 @@ const ExerciseSchema = new mongoose.Schema({
     type: String,
   },
   notes: String,
+  video: {
+    type: String,
+  },
 });
 
 const DaySchema = new mongoose.Schema({

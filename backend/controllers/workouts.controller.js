@@ -184,7 +184,7 @@ async function addDay(req, res) {
 // POST one exercise for a specific day in a workout
 async function createExercise(req, res) {
   const { workoutId, dayId } = req.params;
-  const { name, sets, reps, cadence, notes } = req.body;
+  const { name, sets, reps, cadence, notes, video } = req.body;
   try {
     const workout = await Workout.findById(workoutId);
     if (!workout) {
@@ -194,7 +194,7 @@ async function createExercise(req, res) {
     if (!day) {
       return res.status(404).json({ error: "Day not found" });
     }
-    day.exercises.push({ name, sets, reps, cadence, notes });
+    day.exercises.push({ name, sets, reps, cadence, notes, video });
     await workout.save();
     res.status(201).json(day.exercises[day.exercises.length - 1]);
   } catch (error) {
@@ -206,7 +206,7 @@ async function createExercise(req, res) {
 // PUT one exercise for a specific day in a workout
 async function updateExercise(req, res) {
   const { workoutId, dayId, exerciseId } = req.params;
-  const { name, sets, reps, cadence, notes } = req.body;
+  const { name, sets, reps, cadence, notes, video } = req.body;
   try {
     const workout = await Workout.findById(workoutId);
     if (!workout) {
@@ -220,7 +220,7 @@ async function updateExercise(req, res) {
     if (!exercise) {
       return res.status(404).json({ error: "Exercise not found" });
     }
-    exercise.set({ name, sets, reps, cadence, notes });
+    exercise.set({ name, sets, reps, cadence, notes, video });
     await workout.save();
     res.status(200).json(exercise);
   } catch (err) {

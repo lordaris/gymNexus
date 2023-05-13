@@ -121,6 +121,16 @@ function ExerciseEditPage() {
             onChange={handleChange}
           />
         </div>
+        <div>
+          <label htmlFor="video">Video</label>
+          <input
+            type="text"
+            name="video"
+            className={"input input-ghost w-full max-w-xs m-4"}
+            value={formValues.video}
+            onChange={handleChange}
+          />
+        </div>
         <button
           type="submit"
           className={
