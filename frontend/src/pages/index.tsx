@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import LoginRedirect from "@/pages/components/loginRedirect";
-const Home = () => {
+
+export default function Home() {
   LoginRedirect();
   return (
     <div className="hero min-h-screen">
@@ -37,6 +38,4 @@ const Home = () => {
       </div>
     </div>
   );
-};
-
-export default Home;
+}

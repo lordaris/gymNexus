@@ -8,6 +8,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   LoginRedirect();
@@ -16,6 +17,7 @@ export default function LoginPage() {
     event.preventDefault();
 
     try {
+      setIsLoading(true); // Set isLoading to true
       const response = await axios.post(
         process.env.NEXT_PUBLIC_API_URL + `/users/login`,
         {
@@ -39,6 +41,8 @@ export default function LoginPage() {
       }
     } catch (error) {
       setErrorMessage(error.response.data.message);
+    } finally {
+      setIsLoading(false); // Set isLoading to false
     }
   };
 
@@ -92,8 +96,12 @@ export default function LoginPage() {
           )}
 
           <div className={"flex justify-center"}>
-            <button type="submit" className="btn btn-primary ">
-              Login{" "}
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={isLoading}
+            >
+              {isLoading ? "Loading..." : "Login"}
             </button>
           </div>
         </form>
