@@ -8,6 +8,7 @@ export default function SignupPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("COACH");
+  const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   LoginRedirect();
@@ -16,6 +17,7 @@ export default function SignupPage() {
     event.preventDefault();
 
     try {
+      setIsLoading(true);
       const response = await axios.post(
         process.env.NEXT_PUBLIC_API_URL + "/users/signup",
         {
@@ -28,6 +30,8 @@ export default function SignupPage() {
       router.push("/login");
     } catch (error) {
       alert(error.response.data.message);
+    } finally {
+      setIsLoading(false);
     }
   };
   return (
@@ -82,8 +86,9 @@ export default function SignupPage() {
               <button
                 type="submit"
                 className="btn btn-primary flex justify-center"
+                disabled={isLoading}
               >
-                Create account
+                {isLoading ? "Loading..." : "Create Account"}
               </button>
             </div>
           </div>
