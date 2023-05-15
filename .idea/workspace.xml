@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e09a8b02-6421-4ecf-9fc5-474e7d8ba6f4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/signup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/signup/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/lunges.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +87,7 @@
       <workItem from="1683836789349" duration="13679000" />
       <workItem from="1683988754792" duration="7522000" />
       <workItem from="1684080859685" duration="965000" />
+      <workItem from="1684188777034" duration="1402000" />
     </task>
     <servers />
   </component>

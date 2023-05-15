@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import Layout from "../../../components/userLayout";
-import { BsTrashFill } from "react-icons/bs";
-import Link from "next/link";
 
 function UserDashboard() {
   const [workout, setWorkout] = useState(null);
