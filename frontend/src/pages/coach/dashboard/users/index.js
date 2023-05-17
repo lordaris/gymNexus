@@ -33,23 +33,19 @@ export default function UsersPage() {
   return (
     <Layout>
       <div>
-        <h1 className="text-4xl m-4 font-thin font-lato">Users </h1>
-        <div className="overflow-x-auto ">
-          <table className="table mx-auto">
-            <tbody>
-              {users.map((user) => (
-                <tr key={user._id} className={"hover"}>
-                  <td>
-                    <div>
-                      <Link href={`/coach/dashboard/users/${user._id}`}>
-                        {user.email}
-                      </Link>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <h1 className="text-4xl m-4 font-thin font-lato">Users</h1>
+        <div className="overflow-x-auto">
+          <ul className="list-reset">
+            {users.map((user) => (
+              <li key={user._id} className="my-4 px-4">
+                <div className="border rounded-lg p-4 shadow max-w-md mx-auto">
+                  <Link href={`/coach/dashboard/users/${user._id}`}>
+                    {user.email}
+                  </Link>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </Layout>

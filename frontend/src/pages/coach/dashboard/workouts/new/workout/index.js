@@ -24,6 +24,7 @@ export default function AddWorkout() {
             reps: "",
             cadence: "",
             notes: "",
+            video: "",
           },
         ],
       },
@@ -282,6 +283,7 @@ export default function AddWorkout() {
                   reps: "",
                   cadence: "",
                   notes: "",
+                  video: "",
                 });
                 setFormValues({ ...formValues, days: daysCopy });
               }}
@@ -305,6 +307,7 @@ export default function AddWorkout() {
                   reps: "",
                   cadence: "",
                   notes: "",
+                  video: "",
                 },
               ],
             });

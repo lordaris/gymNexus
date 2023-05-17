@@ -9,8 +9,8 @@ export default function UserDashboard() {
         <Image
           src="/lunges.png"
           alt="empty-state"
-          width={"500"}
-          height={"500"}
+          width={"300"}
+          height={"300"}
           className={"opacity-50 p-4"}
         />
         <p className={"opacity-50 text-4xl"}>No data to display</p>
