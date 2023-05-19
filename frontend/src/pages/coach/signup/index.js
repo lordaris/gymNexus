@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import LoginRedirect from "../../components/loginRedirect";
-
+import { toast } from "react-toastify";
 export default function SignupPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -28,7 +28,16 @@ export default function SignupPage() {
           role,
         }
       );
-      alert("User created successfully");
+      toast.success("Coach account created successfully", {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       router.push("/login");
     } catch (error) {
       alert(error.response.data.message);
@@ -108,7 +117,7 @@ export default function SignupPage() {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="btn btn-primary w-full m-4"
+                className="btn btn-primary m-4"
                 disabled={isLoading || !isPasswordValid} // Disable the button if loading or password is invalid
               >
                 {isLoading ? "Loading..." : "Create Account"}

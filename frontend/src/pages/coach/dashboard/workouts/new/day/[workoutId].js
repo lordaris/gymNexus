@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import Cookie from "js-cookie";
 import Layout from "../../../../../components/coachLayout";
-
+import { toast } from "react-toastify";
 export default function NewDayForm() {
   const [formValues, setFormValues] = useState({
     day: "",
@@ -25,7 +25,16 @@ export default function NewDayForm() {
         }
       )
       .then(() => {
-        alert("Day added!");
+        toast.success("Day added successfully", {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         router.push(`/coach/dashboard/workouts/${workoutId}`);
       })
       .catch((error) => console.error(error));

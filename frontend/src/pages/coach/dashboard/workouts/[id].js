@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 import Layout from "../../../components/coachLayout";
 import Link from "next/link";
 import { BsTrashFill } from "react-icons/bs";
-import { FaEdit, FaPlus } from "react-icons/fa";
-
+import { FaEdit } from "react-icons/fa";
+import { toast } from "react-toastify";
 function Workouts() {
   const [workout, setWorkout] = useState(null);
   const [selectedDay, setSelectedDay] = useState(null);
@@ -47,8 +47,17 @@ function Workouts() {
           headers: { Authorization: `${token}` },
         })
         .then((response) => {
-          alert("La rutina ha sido eliminada exitosamente.");
-          router.push("/");
+          toast.success("Workout has been successfully deleted", {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          router.push("/coach/dashboard/workouts");
         })
         .catch((error) => console.error(error));
     }
@@ -93,8 +102,16 @@ function Workouts() {
           }
         )
         .then((response) => {
-          alert("Day deleted successfully.");
-          // Update the state of the workout to reflect the deletion
+          toast.success("Day deleted successfully", {
+            position: "bottom-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          }); // Update the state of the workout to reflect the deletion
           setWorkout((prevState) => {
             const updatedDays = prevState.days.filter(
               (day) => day._id !== dayId

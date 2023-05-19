@@ -1,11 +1,10 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Cookies from "js-cookie";
 import CoachLayout from "../../../../components/coachLayout";
+import { toast } from "react-toastify";
 
-// TODO Add a confirmation dialog before creating the user
-// TODO Clean up the input fields after creating the user
 // TODO Clean the code
 
 export default function SignupPage() {
@@ -16,6 +15,10 @@ export default function SignupPage() {
   const [errorMessage, setErrorMessage] = useState("");
   const addedBy = id;
   const router = useRouter();
+  const [isPasswordValid, setIsPasswordValid] = useState(false); // New state for password validity
+  const [PasswordChecklist, setPasswordChecklist] = useState(null); // State to store the dynamically imported component
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -29,7 +32,16 @@ export default function SignupPage() {
           addedBy,
         }
       );
-      alert("User created successfully");
+      toast.success("User account created successfully", {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       const token = response.data.token;
       await router.push("/coach/dashboard/users");
     } catch (error) {
@@ -41,9 +53,25 @@ export default function SignupPage() {
     }
   };
 
+  // Function to handle password validity changes
+  const handlePasswordValidityChange = (isValid) => {
+    setIsPasswordValid(isValid);
+  };
+
+  useEffect(() => {
+    // Dynamically import the PasswordChecklist component on the client-side
+    import("react-password-checklist").then((module) => {
+      setPasswordChecklist(() => module.default);
+    });
+  }, []);
+
   return (
     <CoachLayout>
-      <div className="">
+      <div
+        className={
+          "min-h-screen flex flex-col h-full items-center justify-center p-10 text-base-content bg-base-100"
+        }
+      >
         <div className="">
           <div>
             <h2 className="text-4xl m-4 font-thin font-lato">
@@ -63,7 +91,7 @@ export default function SignupPage() {
                   type="email"
                   autoComplete="email"
                   required={true}
-                  className={"input input-ghost w-full max-w-xs m-4"}
+                  className={"input input-ghost m-4 lg:w-full"}
                   placeholder="Email address"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
@@ -79,11 +107,19 @@ export default function SignupPage() {
                   type="password"
                   autoComplete="current-password"
                   required={true}
-                  className={"input input-ghost w-full max-w-xs m-4"}
+                  className={"input input-ghost m-4 lg:w-full"}
                   placeholder="Password"
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
                 />
+                {PasswordChecklist && ( // Render the PasswordChecklist if it has been dynamically imported
+                  <PasswordChecklist
+                    rules={["minLength", "specialChar", "number", "capital"]}
+                    minLength={8}
+                    value={password}
+                    onChange={handlePasswordValidityChange} // Pass the handler function
+                  />
+                )}
               </div>
               <div>
                 <label htmlFor="role" className="sr-only">
@@ -93,8 +129,12 @@ export default function SignupPage() {
             </div>
 
             <div>
-              <button type="submit" className="btn-success btn m-4">
-                Create account
+              <button
+                type="submit"
+                className="btn btn-primary m-4"
+                disabled={isLoading || !isPasswordValid} // Disable the button if loading or password is invalid
+              >
+                {isLoading ? "Loading..." : "Create Account"}
               </button>
             </div>
           </form>

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Layout from "../../../../../components/coachLayout";
 import Cookie from "js-cookie";
 import { BsTrashFill } from "react-icons/bs";
-
+import { toast } from "react-toastify";
 export default function AddWorkout() {
   const [users, setUsers] = useState([]);
   const coachId = Cookie.get("user");
@@ -52,7 +52,16 @@ export default function AddWorkout() {
         headers: { Authorization: `${token}` },
       })
       .then(() => {
-        alert("Workout created successfully");
+        toast.success("Workout created successfully", {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         router.push("/coach/dashboard/workouts");
       })
       .catch((error) => console.error(error));

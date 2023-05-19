@@ -33,28 +33,22 @@ export default function RoutinesPage() {
 
   return (
     <Layout>
-      <div className="flex justify-center">
+      <div>
         <h1 className="text-4xl m-4 font-thin font-lato">Workouts</h1>
       </div>
 
       <div className="overflow-x-auto">
-        <table className="table mx-auto">
-          <tbody>
-            {routines.map((workout) => (
-              <tr key={workout._id} className={"hover"}>
-                <td>
-                  <div>
-                    <div className="">
-                      <Link href={`/coach/dashboard/workouts/${workout._id}`}>
-                        {workout.name}
-                      </Link>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <ul className="list-reset">
+          {routines.map((workout) => (
+            <li key={workout._id} className="my-4 px-4">
+              <div className="border rounded-lg p-4 shadow max-w-md mx-auto">
+                <Link href={`/coach/dashboard/workouts/${workout._id}`}>
+                  {workout.name}
+                </Link>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </Layout>
   );
