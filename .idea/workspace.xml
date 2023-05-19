@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e09a8b02-6421-4ecf-9fc5-474e7d8ba6f4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/profile/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/users/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/workout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/workout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/profile/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/signup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/signup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/login/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +90,8 @@
       <workItem from="1684188777034" duration="3215000" />
       <workItem from="1684340288567" duration="8476000" />
       <workItem from="1684361658748" duration="2317000" />
+      <workItem from="1684498485641" duration="545000" />
+      <workItem from="1684519508803" duration="7576000" />
     </task>
     <servers />
   </component>

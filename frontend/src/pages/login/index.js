@@ -47,19 +47,19 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex flex-col h-full items-center justify-center min-h-screen p-10 text-base-content bg-base-100 ">
-      <div className="">
+    <div className="min-h-screen flex flex-col h-full items-center justify-center p-10 text-base-content bg-base-100">
+      <div className="maw-w-md">
         <div>
-          <h1 className={"font-thin font-lato text-4xl m-4"}>
-            Login to your account{" "}
+          <h1 className="font-thin font-lato text-4xl m-4">
+            Login to your account
           </h1>
         </div>
-        <form className="" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <input type="hidden" name="remember" value="true" />
-          <div className="">
+          <div className={"flex flex-col"}>
             <div>
               <label htmlFor="email-address" className="sr-only">
-                Email{" "}
+                Email
               </label>
               <input
                 id="email-address"
@@ -67,7 +67,7 @@ export default function LoginPage() {
                 type="email"
                 autoComplete="email"
                 required
-                className={"input input-ghost w-full max-w-xs m-4"}
+                className="input input-ghost m-4 lg:w-full"
                 placeholder="Email address"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
@@ -83,7 +83,7 @@ export default function LoginPage() {
                 type="password"
                 autoComplete="current-password"
                 required
-                className={"input input-ghost w-full max-w-xs m-4"}
+                className="input input-ghostm-4 m-4 lg:w-full"
                 placeholder="Password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
@@ -95,10 +95,10 @@ export default function LoginPage() {
             <div className="mt-2 text-sm text-red-600">{errorMessage}</div>
           )}
 
-          <div className={"flex justify-center"}>
+          <div className="flex justify-center">
             <button
               type="submit"
-              className="btn btn-primary"
+              className="btn btn-primary w-full m-4"
               disabled={isLoading}
             >
               {isLoading ? "Loading..." : "Login"}

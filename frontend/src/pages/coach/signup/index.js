@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import LoginRedirect from "../../components/loginRedirect";
+import PasswordChecklist from "react-password-checklist";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -10,6 +11,7 @@ export default function SignupPage() {
   const [role, setRole] = useState("COACH");
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [isPasswordValid, setIsPasswordValid] = useState(false); // New state for password validity
 
   LoginRedirect();
 
@@ -34,20 +36,26 @@ export default function SignupPage() {
       setIsLoading(false);
     }
   };
+
+  // Function to handle password validity changes
+  const handlePasswordValidityChange = (isValid) => {
+    setIsPasswordValid(isValid);
+  };
+
   return (
     <div className="min-h-screen flex flex-col h-full items-center justify-center p-10 text-base-content bg-base-100">
-      <div className="">
+      <div className="max-w-md">
         <div>
-          <h1 className="text-4xl m-4 font-lato ">
-            Create an account, it is free!
+          <h1 className="text-4xl m-4 font-lato">
+            Create an account, is free!
           </h1>
         </div>
-        <form className="" onSubmit={handleSubmit}>
+        <form className="flex flex-col" onSubmit={handleSubmit}>
           <input type="hidden" name="remember" value="true" />
-          <div className="">
+          <div className="flex flex-col">
             <div>
               <label htmlFor="email-address" className="sr-only">
-                Email address{" "}
+                Email address
               </label>
               <input
                 id="email-address"
@@ -55,7 +63,7 @@ export default function SignupPage() {
                 type="email"
                 autoComplete="email"
                 required={true}
-                className={"input input-ghost w-full max-w-xs m-4"}
+                className="input input-ghost m-4 lg:w-full"
                 placeholder="Email address"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
@@ -71,22 +79,28 @@ export default function SignupPage() {
                 type="password"
                 autoComplete="current-password"
                 required={true}
-                className={"input input-ghost w-full max-w-xs m-4"}
+                className="input input-ghost m-4 lg:w-full"
                 placeholder="Password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
               />
+              <PasswordChecklist
+                rules={["minLength", "specialChar", "number", "capital"]}
+                minLength={8}
+                value={password}
+                onChange={handlePasswordValidityChange} // Pass the handler function
+              />
             </div>
             <div>
               <label htmlFor="role" className="sr-only">
-                Rol
+                Role
               </label>
             </div>
-            <div className={"flex justify-center"}>
+            <div className="flex justify-center">
               <button
                 type="submit"
-                className="btn btn-primary flex justify-center"
-                disabled={isLoading}
+                className="btn btn-primary w-full m-4"
+                disabled={isLoading || !isPasswordValid} // Disable the button if loading or password is invalid
               >
                 {isLoading ? "Loading..." : "Create Account"}
               </button>
