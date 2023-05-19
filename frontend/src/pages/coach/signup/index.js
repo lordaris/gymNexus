@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import LoginRedirect from "../../components/loginRedirect";
-import PasswordChecklist from "react-password-checklist";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -12,6 +11,7 @@ export default function SignupPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [isPasswordValid, setIsPasswordValid] = useState(false); // New state for password validity
+  const [PasswordChecklist, setPasswordChecklist] = useState(null); // State to store the dynamically imported component
 
   LoginRedirect();
 
@@ -41,6 +41,13 @@ export default function SignupPage() {
   const handlePasswordValidityChange = (isValid) => {
     setIsPasswordValid(isValid);
   };
+
+  useEffect(() => {
+    // Dynamically import the PasswordChecklist component on the client-side
+    import("react-password-checklist").then((module) => {
+      setPasswordChecklist(() => module.default);
+    });
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col h-full items-center justify-center p-10 text-base-content bg-base-100">
@@ -84,12 +91,14 @@ export default function SignupPage() {
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
               />
-              <PasswordChecklist
-                rules={["minLength", "specialChar", "number", "capital"]}
-                minLength={8}
-                value={password}
-                onChange={handlePasswordValidityChange} // Pass the handler function
-              />
+              {PasswordChecklist && ( // Render the PasswordChecklist if it has been dynamically imported
+                <PasswordChecklist
+                  rules={["minLength", "specialChar", "number", "capital"]}
+                  minLength={8}
+                  value={password}
+                  onChange={handlePasswordValidityChange} // Pass the handler function
+                />
+              )}
             </div>
             <div>
               <label htmlFor="role" className="sr-only">
