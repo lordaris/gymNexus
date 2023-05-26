@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import LoginRedirect from "@/pages/components/loginRedirect";
+import LoginRedirect from "@/pages/components/ui/loginRedirect";
 
 export default function Home() {
   LoginRedirect();
@@ -34,6 +34,8 @@ export default function Home() {
           <Link href={"/login"} className={"flex justify-center link-primary"}>
             already a member?
           </Link>
+          
+          <Link className="flex justify-center font-bold py-10" href={"https://bmc.link/lordaris"}>Buy me a coffee!</Link>
         </div>
       </div>
     </div>

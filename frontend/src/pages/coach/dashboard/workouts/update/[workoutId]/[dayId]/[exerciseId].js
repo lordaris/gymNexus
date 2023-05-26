@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Layout from "../../../../../../components/coachLayout";
+import Layout from "../../../../../../components/ui/coachLayout";
 import Cookie from "js-cookie";
+import { toast } from "react-toastify";
 
 function ExerciseEditPage() {
   const [workout, setWorkout] = useState(null);
@@ -52,7 +53,16 @@ function ExerciseEditPage() {
         { headers: { Authorization: `${token}` } }
       )
       .then(() => {
-        alert("Exercise updated!");
+        toast.success("Exercise modified successfully", {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         router.push(`/coach/dashboard/workouts/${workoutId}`);
       })
       .catch((error) => console.error(error));

@@ -1,5 +1,5 @@
-import LoginRedirect from "../../components/loginRedirect";
-import CoachLayout from "../../components/coachLayout";
+import LoginRedirect from "../../components/ui/loginRedirect";
+import CoachLayout from "../../components/ui/coachLayout";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPlus } from "react-icons/fa";

@@ -5,16 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e09a8b02-6421-4ecf-9fc5-474e7d8ba6f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/components/handleDeleteDay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/components/handleDeleteExercise.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/components/handleDeleteWorkout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/profile/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/users/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/users/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/users/assign/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/users/assign/[id].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/users/createuser/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/users/createuser/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/users/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/[id].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/day/[workoutId].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/day/[workoutId].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/exercise/[workoutId]/[dayId].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/exercise/[workoutId]/[dayId].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/workout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/workout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/update/[workoutId]/[dayId]/[exerciseId].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/update/[workoutId]/[dayId]/[exerciseId].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/coach/signup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/coach/signup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/components/coachLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/components/ui/coachLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/components/loginRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/components/ui/loginRedirect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/components/logoutButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/components/ui/logoutButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/components/userLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/components/ui/userLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/profile/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +76,11 @@
       <recent name="$PROJECT_DIR$/frontend/src/pages/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/pages/components/ui" />
       <recent name="$PROJECT_DIR$/frontend/src/pages/user/dashboard/routines" />
       <recent name="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new" />
       <recent name="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/new/workout" />
       <recent name="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/[workoutId]/[dayId]/[exerciseId]/edit" />
-      <recent name="$PROJECT_DIR$/frontend/src/pages/coach/dashboard/workouts/[workoutId]/[dayId]/[exerciseId]" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -95,7 +113,9 @@
       <workItem from="1684340288567" duration="8476000" />
       <workItem from="1684361658748" duration="2317000" />
       <workItem from="1684498485641" duration="545000" />
-      <workItem from="1684519508803" duration="14577000" />
+      <workItem from="1684519508803" duration="14829000" />
+      <workItem from="1684602885247" duration="9152000" />
+      <workItem from="1684767693666" duration="1714000" />
     </task>
     <servers />
   </component>

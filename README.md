@@ -36,15 +36,17 @@ The clients can then view their routines. You can watch it in action on my IG ac
 * Node.js
 
 ## TODO List
+- [ ] Replace alerts with modals
+- [ ] Replace success alerts with toasts 
 - [ ] Add a paid sign up feature
 - [ ] Add a confirmation email feature
 - [ ] Add a "Forgot username" feature
 - [ ] Add a "Forgot password" feature
 - [ ] Add metrics for the users to track their progress
 - [ ] Improve the UI
-- [ ] Make the app responsive
+- [X] Make the app responsive
 - [ ] Improve the UX
 - [ ] Improve the security of the app
-- [ ] Improve the code, maybe using a repository pattern which will make the code more readable and easier to maintain
+- [ ] Improve the code, maybe using a repository pattern or SOLID principles which will make the code more readable and easier to maintain
 
 
